@@ -18,7 +18,7 @@ driver.maximize_window()
 driver.get('https://www.amazon.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fyour-orders%2Forders%3Fref_%3Dya_d_c_yo&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_retail_yourorders_us&openid.mode=checkid_setup&language=en_US&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0')
 
 # Locate : Amazon logo, By XPATH
-logo_img = driver.find_element(By.XPATH, '//*[@id="a-page"]/div[1]/div[1]/div/a')
+logo_img = driver.find_element(By.XPATH, '//a[@class="a-link-nav-icon"]')
 
 # Locate : Email field & send text, By ID
 login_field = driver.find_element(By.ID, 'ap_email')
@@ -29,13 +29,13 @@ login_field.send_keys('abc@gmail.com')
 continue_button = driver.find_element(By.CLASS_NAME, 'a-button-inner')
 
 # Locate : Conditions of use link, By XPATH
-condition_link = driver.find_element(By.XPATH, '//*[@id="legalTextRow"]/a[1]')
+condition_link = driver.find_element(By.XPATH, '//a[@href="/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=508088"]')
 
 # Locate : Privacy Notice link, By XPATH
-privacy_link = driver.find_element(By.XPATH, '//*[@id="legalTextRow"]/a[2]')
+privacy_link = driver.find_element(By.XPATH, '//a[@href="/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=468496"]')
 
 # Locate : Need help link, By XPATH
-needhelp_link = driver.find_element(By.XPATH, '//*[@id="authportal-main-section"]/div[2]/div[2]/div[1]/form/div/div/div/div[3]/div/a/i')
+needhelp_link = driver.find_element(By.XPATH, '//i[@class="a-icon a-icon-expand"]')
 needhelp_link.click()
 sleep(2)
 
