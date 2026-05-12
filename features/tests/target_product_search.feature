@@ -1,11 +1,12 @@
 Feature: Q1 Update Target product search test case and add Behave variables
 
-  Scenario: Target Product Search
+  Scenario: Target Single Product Search
     Given Open Target Home page in browser
     When Sign in for the best experience popup is open
     Then Close the popup
-    When Search for tea from main page
-    Then Verify search results for tea is shown
+    When Search for tea from results page
+    Then Verify search results for tea is displayed
+    Then Verify products are listing with name and image
 
 
   Scenario Outline: Target Product Search for multiple products
@@ -33,4 +34,9 @@ Feature: Q1 Update Target product search test case and add Behave variables
     Then Added to cart option will be shown in Navigation bar
     When Click on View Cart button from navigation bar
     Then Cart option will be shown on the screen
+
+  Scenario: Selecting multiple options
+    Given Open target Product details page
+    Then User can click different color options from details page
+    Then User can click on fulfillment options
 
