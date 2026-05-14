@@ -8,7 +8,6 @@ Feature: Q1 Update Target product search test case and add Behave variables
     Then Verify search results for tea is displayed
     Then Verify products are listing with name and image
 
-
   Scenario Outline: Target Product Search for multiple products
     Given Open Target Home page in browser
     When Sign in for the best experience popup is open
@@ -40,3 +39,16 @@ Feature: Q1 Update Target product search test case and add Behave variables
     Then User can click different color options from details page
     Then User can click on fulfillment options
 
+# Scenarios for Lesson 6 Homeworks
+  Scenario: Target Single Product Search with POM
+    Given Open Target main page
+    When Best experience sign in popup is open
+    Then Close best experience popup
+    When Search for coffe from header
+    Then Verify search results displays coffee
+    Then Verify coffees are showing with name and image
+
+  Scenario: “Your cart is empty” message is shown for empty cart
+    Given Open Target main page
+    When Click on Cart Icon from header
+    Then Verify 'Your cart is empty' is shown
